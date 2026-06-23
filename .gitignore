@@ -1,0 +1,19 @@
+# Ignore everything
+*
+
+# Reinclude directories
+!*/
+
+# Add .gitignore to white list
+!.gitignore
+
+# Other .git files
+!.gitattributes
+!.gitmodules
+
+# Folders
+!/src/**
+
+# Files
+!LICENSE
+!README.md
