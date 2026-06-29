@@ -9,3 +9,17 @@ User sends a request to server. Server handles request and launches agent pipeli
 # How pipeline work
 
 It is a python module, which interacts with llm server and is responsible for entire ai workflow. It launches agent sessions and provides ability to interact with toolchains.
+
+# How to run
+
+```bash
+uvicorn src.server:app --reload
+```
+
+```bash
+python -m uvicorn src.server:app --reload
+```
+
+```bash
+python src/server.py
+```
