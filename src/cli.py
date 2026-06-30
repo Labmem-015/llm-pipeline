@@ -51,6 +51,7 @@ def interactive_prompt():
 
 @app.callback(invoke_without_command=True)
 def main(ctx: typer.Context):
+    """Main entry point if no args are specified"""
     # Если подкоманда не передана, вызываем command1
     if ctx.invoked_subcommand is None:
         interactive_prompt()
