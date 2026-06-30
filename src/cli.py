@@ -6,6 +6,7 @@ app = typer.Typer()
 
 HARDCODED_USER = "default_user"
 BASE_URL = "http://localhost:8000"
+session_id = random.randint(1, 100000)
 think_mode = True
 
 @app.command("send")
@@ -14,7 +15,6 @@ def send_prompt(
     think: bool = typer.Option(False, "--think", help="Enable thinking mode"),
 ):
     """Send a prompt to the server."""
-    session_id = random.randint(1, 100000)
     url = f"{BASE_URL}/chat/{session_id}"
     payload = {
         "username": HARDCODED_USER,
