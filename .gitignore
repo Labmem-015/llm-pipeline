@@ -10,6 +10,7 @@
 # Files
 !LICENSE
 !README.md
+!pyproject.toml
 
 # Folders
 !/src
