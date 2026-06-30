@@ -1,9 +1,5 @@
 # Ignore everything
 *
-
-# Reinclude directories
-!*/
-
 # Add .gitignore to white list
 !.gitignore
 
@@ -11,9 +7,13 @@
 !.gitattributes
 !.gitmodules
 
-# Folders
-!/src/**
-
 # Files
 !LICENSE
 !README.md
+
+# Folders
+!/src
+!/src/**
+
+# Cache
+**/__pycache__
