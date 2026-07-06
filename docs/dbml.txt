@@ -1,0 +1,35 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table users {
+  id integer [primary key, not null]
+  username varchar [unique]
+  role varchar [note: 'user/assistant/system']
+  email varchar [unique]
+  password_hash varchar
+  created_at timestamp [default: `now()`]
+  permissions integer [note: 'reserved']
+  birth_date datetime
+}
+
+Table messages {
+  id integer [primary key, not null]
+  created_at timestamp [default: `now()`]
+  session_id integer [not null]
+
+  matpath text [note: 'stores parents like: "1.2.5.6.7" \
+    where last num is current. \
+    Path has depth (default 100)']
+}
+
+Table sessions {
+  id integer [primary key, not null]
+  user_id integer [not null]
+  last_message integer [null]
+  title text
+  created_at timestamp [default: `now()`]
+}
+
+Ref: sessions.user_id > users.id
+Ref: sessions.last_message - messages.id
+Ref: messages.session_id > sessions.id
