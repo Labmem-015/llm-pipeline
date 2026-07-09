@@ -2,7 +2,8 @@ from openai import OpenAI
 from nortllm.env import *
 
 client = OpenAI(
-    base_url=BASE_URL
+    base_url=BASE_URL,
+    api_key=API_KEY
 )
 
 messages_to_send = [
@@ -10,14 +11,10 @@ messages_to_send = [
     {"role": "user", "content": "Give me your status"}
 ]
 
-conversation_history = [
-    {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": "Explain quantum computing in one sentence."}
-]
-
 response = client.chat.completions.create(
     model="default",
-    messages=conversation_history
+    messages=messages_to_send # type:ignore 
 )
 
-print(response)
+print(response.choices[0].message.content)
+print(client.chat.completions.list())
