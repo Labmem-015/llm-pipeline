@@ -20,3 +20,4 @@
 
 # Cache
 **/__pycache__
+**/*.egg-info
