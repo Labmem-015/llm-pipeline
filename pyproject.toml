@@ -1,2 +1,12 @@
+[project]
+name = "llm-pipeline"
+version = "0.0.0"
+dependencies = [
+    "requests>=2.34.2",
+    "pydantic>=2.13.4",
+    "fastapi[standard]>=0.139.0",
+    "typer>=0.26.8",
+]
+
 [tool.fastapi]
 entrypoint = "src.server:app"
