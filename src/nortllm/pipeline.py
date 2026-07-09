@@ -1,5 +1,5 @@
 from openai import OpenAI
-from env import *
+from nortllm.env import *
 
 client = OpenAI(
     base_url=BASE_URL
