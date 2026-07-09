@@ -1,0 +1,11 @@
+{
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+    }
+}

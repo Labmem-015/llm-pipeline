@@ -18,6 +18,10 @@
 !/docs
 !/docs/**
 
+# VSCode settings
+!/.vscode   
+!/.vscode/settings.json
+
 # Cache
 **/__pycache__
 **/*.egg-info
