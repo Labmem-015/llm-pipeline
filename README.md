@@ -1,6 +1,6 @@
 # About
 
-This project is a simple impementation of ai-agent pipeline.
+This project is a simple impementation of ai-agent pipeline. The final goal is to use this simple pipeline to work with documents via complex interaction with UI.
 
 # Interaction
 
