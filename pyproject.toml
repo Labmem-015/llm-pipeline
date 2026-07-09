@@ -6,6 +6,7 @@ dependencies = [
     "pydantic>=2.13.4",
     "fastapi[standard]>=0.139.0",
     "typer>=0.26.8",
+    "openai>=2.44.0",
 ]
 
 [tool.fastapi]
