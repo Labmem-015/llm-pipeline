@@ -11,15 +11,22 @@ User sends a request to server. Server handles request and launches agent pipeli
 It is a python module, which interacts with llm server and is responsible for entire ai workflow. It launches agent sessions and provides ability to interact with toolchains.
 
 # How to run
+## Quick start
 
 ```bash
-uvicorn src.server:app --reload
+fastapi dev
+```
+
+## Other ways to run
+
+```bash
+uvicorn src.nortllm.server:app --reload
 ```
 
 ```bash
-python -m uvicorn src.server:app --reload
+python -m uvicorn src.nortllm.server:app --reload
 ```
 
 ```bash
-python src/server.py
+python src/nortllm/server.py
 ```
